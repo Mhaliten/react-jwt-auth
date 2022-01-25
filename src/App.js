@@ -59,7 +59,7 @@ class App extends Component {
           <div className="navbar-nav mr-auto">
             <li className="nav-item">
               <Link to={"/home"} className="nav-link">
-                Home
+                Főoldal
               </Link>
             </li>
 
@@ -87,7 +87,7 @@ class App extends Component {
 
             {showAdminBoard && (
               <li className="nav-item">
-                <Link to={"/admin"} className="nav-link">
+                <Link to={"/AdatTorles"} className="nav-link">
                   Adatok törlése 
                 </Link>
               </li>
@@ -112,7 +112,7 @@ class App extends Component {
               </li>
               <li className="nav-item">
                 <a href="/login" className="nav-link" onClick={this.logOut}>
-                  LogOut
+                  Kijelentkezés
                 </a>
               </li>
             </div>
@@ -120,7 +120,7 @@ class App extends Component {
             <div className="navbar-nav ml-auto">
               <li className="nav-item">
                 <Link to={"/login"} className="nav-link">
-                  Login
+                  Bejelentkezés
                 </Link>
               </li>
 

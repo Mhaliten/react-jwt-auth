@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, FlatList, ActivityIndicator, Text, View, Image , TouchableOpacity } from 'react-native';
+import {StyleSheet, FlatList, ActivityIndicator, Text, View, Image , TouchableOpacity } from 'react-native-web';
 
 export default class FetchExample extends React.Component {
 
@@ -65,11 +65,11 @@ export default class FetchExample extends React.Component {
 
           <View >
           <Text style={{color:"brown",fontSize:20,textAlign:"center",marginTop:15,marginBottom:5}}   >{item.termek_nev} </Text>
-          <Image  source={{uri: 'http://localhost:3000/'+item.film_kep}} style={{width:300,height:300,marginLeft:"auto",marginRight:"auto"}} />  
+          <Image  source={{uri: 'http://localhost:3000/'+item.termek_nev}} style={{width:300,height:300,marginLeft:"auto",marginRight:"auto"}} />  
 
           <TouchableOpacity
         style={styles.kekgomb}
-        onPress={async ()=>this.szavazat(item.film_id)}
+        onPress={async ()=>this.szavazat(item.termek_id)}
       >
         <Text style={{color:"white",fontWeight:"bold",fontSize:15}}  >Erre szavazok</Text>
       </TouchableOpacity>
@@ -96,3 +96,4 @@ const styles = StyleSheet.create({
     marginRight:"auto",
   }
 });
+
