@@ -88,7 +88,7 @@ class App extends Component {
             {showAdminBoard && (
               <li className="nav-item">
                 <Link to={"/AdatTorles"} className="nav-link">
-                  Adatok törlése 
+                  Típusok törlése 
                 </Link>
               </li>
             )}

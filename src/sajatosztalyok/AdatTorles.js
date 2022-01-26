@@ -8,13 +8,13 @@ export default class FetchExample extends React.Component {
     this.state ={ isLoading: true}
   }
 
-  szavazat=(szam)=>{
-    //alert(szam)
+  kitorles=(szam)=>{
+    alert(szam)
     var bemenet={
       bevitel1:szam
     }
 
-  fetch("http://localhost:3000/szavazatfelvitel", {
+  fetch("http://localhost:8080/torles", {
       method: "POST",
       body: JSON.stringify(bemenet),
       headers: {"Content-type": "application/json; charset=UTF-8"}
@@ -28,7 +28,7 @@ export default class FetchExample extends React.Component {
 
 
   componentDidMount(){
-    return fetch('http://localhost:3000/termekek')
+    return fetch('http://localhost:8080/tipus')
       .then((response) => response.json())
       .then((responseJson) => {
 
@@ -64,21 +64,20 @@ export default class FetchExample extends React.Component {
           renderItem={({item}) => 
 
           <View >
-          <Text style={{color:"brown",fontSize:20,textAlign:"center",marginTop:15,marginBottom:5}}   >{item.termek_nev} </Text>
-          <Image  source={{uri: 'http://localhost:3000/'+item.termek_nev}} style={{width:300,height:300,marginLeft:"auto",marginRight:"auto"}} />  
-
+          <Text style={{color:"brown",fontSize:20,textAlign:"center",marginTop:15,marginBottom:5}}   >{item.tipus_nev} </Text>
+          
           <TouchableOpacity
         style={styles.kekgomb}
-        onPress={async ()=>this.szavazat(item.termek_id)}
+        onPress={async ()=>this.kitorles(item.tipus_id)}
       >
-        <Text style={{color:"white",fontWeight:"bold",fontSize:15}}  >Erre szavazok</Text>
+        <Text style={{color:"white",fontWeight:"bold",fontSize:15}}  >Törlés</Text>
       </TouchableOpacity>
           </View>
         
         }
 
         
-          keyExtractor={({termek_id}, index) => termek_id}
+          keyExtractor={({tipus_id}, index) => tipus_id}
         />
       </View>
     );
