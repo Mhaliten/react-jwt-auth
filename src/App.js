@@ -87,12 +87,19 @@ class App extends Component {
 
             {showAdminBoard && (
               <li className="nav-item">
-                <Link to={"/AdatTorles"} className="nav-link">
+                <Link to={"/AdatTorles"} className="nav-link"> 
                   Típusok törlése 
                 </Link>
               </li>
             )}
             
+            {showAdminBoard && (
+              <li className="nav-item">
+                <Link to={"/AdatFelvitel"} className="nav-link">
+                  Termék felvitele 
+                </Link>
+              </li>
+            )}
 
             {currentUser && (
               <li className="nav-item">
