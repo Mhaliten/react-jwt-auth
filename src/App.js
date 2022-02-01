@@ -84,12 +84,31 @@ class App extends Component {
 
 
         </Nav>
-        <Nav>
-          <Nav.Link href="#deets">More deets</Nav.Link>
-          <Nav.Link eventKey={2} href="#memes">
-            Dank memes
-          </Nav.Link>
-        </Nav>
+        {currentUser ?
+
+(
+<Nav>
+ <Nav.Link href="/profile">
+ {currentUser.username}
+ </Nav.Link>
+ <Nav.Link href="/login" onClick={this.logOut}>
+ Kijelentkezés
+
+</Nav.Link> </Nav>
+)
+ :
+
+(
+
+<Nav>
+ <Nav.Link href="/
+login"> Bejelentkezés </Nav.Link>
+
+<Nav.Link href="/register">
+ Regisztráció
+</Nav.Link>
+ </Nav>
+)}
       </Navbar.Collapse>
     </Navbar>
 
