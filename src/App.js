@@ -17,6 +17,8 @@ import BoardAdmin from "./components/board-admin.component";
 import Proba from "./sajatosztalyok/Proba";
 import AdatTorles from "./sajatosztalyok/AdatTorles";
 import Fooldal from "./sajatosztalyok/Fooldal";
+import TermekTorles from "./sajatosztalyok/TermekTorles";
+
 
 
 
@@ -71,9 +73,7 @@ class App extends Component {
 
           <NavDropdown title="Admin menü" id="collasible-nav-dropdown">
             <NavDropdown.Item href="/AdatTorles">Típusok törlése</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">
-              Another action
-            </NavDropdown.Item>
+            <NavDropdown.Item href="TermekTorles">Termék törlése</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item href="#action/3.4">
@@ -146,6 +146,7 @@ login"> Bejelentkezés </Nav.Link>
             <Route path="/Proba" component={Proba} />
             <Route path="/AdatTorles" component={AdatTorles} />
             <Route path="/Fooldal" component={Fooldal} />
+            <Route path="/TermekTorles" component={TermekTorles} />
 
           </Switch>
         </div>
