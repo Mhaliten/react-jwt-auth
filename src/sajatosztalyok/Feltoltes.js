@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React,{useState} from 'react'
 
+// EZ A JS-file, a kép feltöltéshez van
+
 function FileUpload() {
 
     const [file, setFile] = useState();
