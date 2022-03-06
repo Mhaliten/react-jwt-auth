@@ -64,7 +64,7 @@ export default class FetchExample extends React.Component {
           renderItem={({item}) => 
 
           <View >
-          <Text style={{color:"brown",fontSize:20,textAlign:"center",marginTop:15,marginBottom:5}}   >{item.tipus_nev} </Text>
+          <Text style={{color:"black",fontSize:20,textAlign:"center",marginTop:15,marginBottom:5}}   >{item.tipus_nev} </Text>
           
           <TouchableOpacity
         style={styles.kekgomb}
@@ -88,11 +88,16 @@ const styles = StyleSheet.create({
   
   kekgomb: {
     alignItems: "center",
-    backgroundColor: "blue",
-    padding: 10,
+    backgroundColor: "grey",
+    padding: 15,
     width:300,
     marginLeft:"auto",
     marginRight:"auto",
+    marginBottom:"10px",
+    borderWidth:5,
+    borderColor:'black',
+    borderRadius:50,
+    
   }
 });
 
