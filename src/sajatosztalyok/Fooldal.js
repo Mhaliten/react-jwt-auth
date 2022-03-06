@@ -114,7 +114,8 @@ export default class AppTermek extends React.Component {
 
 
 {/*--------------------------------------------------------------------------a témába tartozó üzenetek */}        
-<FlatList
+<FlatList 
+          
           data={this.state.dataSource2}
           renderItem={({item}) => 
 
@@ -132,6 +133,7 @@ export default class AppTermek extends React.Component {
         
         }
     
+        
           keyExtractor={({termek_id}, index) => termek_id}
         />
 
