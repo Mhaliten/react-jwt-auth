@@ -18,6 +18,7 @@ import Proba from "./sajatosztalyok/Proba";
 import TipusTorles from "./sajatosztalyok/TipusTorles";
 import Fooldal from "./sajatosztalyok/Fooldal";
 import TermekTorles from "./sajatosztalyok/TermekTorles";
+import TipusFelvitel from "./sajatosztalyok/TipusFelvitel";
 
 
 
@@ -74,6 +75,7 @@ class App extends Component {
           <NavDropdown title="Admin menü" id="collasible-nav-dropdown">
             <NavDropdown.Item href="/TipusTorles">Típusok törlése</NavDropdown.Item>
             <NavDropdown.Item href="TermekTorles">Termék törlése</NavDropdown.Item>
+            <NavDropdown.Item href="TipusFelvitel">Tipus felvitele</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item href="#action/3.4">
@@ -147,6 +149,7 @@ login"> Bejelentkezés </Nav.Link>
             <Route path="/TipusTorles" component={TipusTorles} />
             <Route path="/Fooldal" component={Fooldal} />
             <Route path="/TermekTorles" component={TermekTorles} />
+            <Route path="/TipusFelvitel" component={TipusFelvitel} />
 
           </Switch>
         </div>
