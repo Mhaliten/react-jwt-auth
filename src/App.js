@@ -19,8 +19,8 @@ import TipusTorles from "./sajatosztalyok/TipusTorles";
 import Fooldal from "./sajatosztalyok/Fooldal";
 import TermekTorles from "./sajatosztalyok/TermekTorles";
 import TipusFelvitel from "./sajatosztalyok/TipusFelvitel";
-
-
+import EtelTipusFelvitel from "./sajatosztalyok/EtelTipusFelvitel";
+import TermekFelvitel from "./sajatosztalyok/TermekFelvitel";
 
 
 
@@ -73,13 +73,17 @@ class App extends Component {
           {showAdminBoard && (   
 
           <NavDropdown title="Admin menü" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="/TipusTorles">Típusok törlése</NavDropdown.Item>
-            <NavDropdown.Item href="TermekTorles">Termék törlése</NavDropdown.Item>
+
             <NavDropdown.Item href="TipusFelvitel">Tipus felvitele</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+            <NavDropdown.Item href="EtelTipusFelvitel">Étel tipus felvitele</NavDropdown.Item>
+            <NavDropdown.Item href="TermekFelvitel">Termék felvitele</NavDropdown.Item>
+            
             <NavDropdown.Divider />
             <NavDropdown.Item href="#action/3.4">
-              Separated link
+
+            <NavDropdown.Item href="/TipusTorles">Típusok törlése</NavDropdown.Item>
+            <NavDropdown.Item href="TermekTorles">Termék törlése</NavDropdown.Item>
+
             </NavDropdown.Item>
           </NavDropdown>
           
@@ -120,20 +124,6 @@ login"> Bejelentkezés </Nav.Link>
 
 
 
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <div className="container mt-3">
           <Switch>
@@ -150,7 +140,8 @@ login"> Bejelentkezés </Nav.Link>
             <Route path="/Fooldal" component={Fooldal} />
             <Route path="/TermekTorles" component={TermekTorles} />
             <Route path="/TipusFelvitel" component={TipusFelvitel} />
-
+            <Route path="/EtelTipusFelvitel" component={EtelTipusFelvitel} />
+            <Route path="/TermekFelvitel" component={TermekFelvitel} />
           </Switch>
         </div>
       </div>

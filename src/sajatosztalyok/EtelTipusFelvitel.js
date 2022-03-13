@@ -21,7 +21,7 @@ felvitel=async ()=>{
     
     }
 
-    fetch('http://localhost:8080/termek_felvitel',{
+    fetch('http://localhost:8080/eteltipus_felvitel',{
       method: "POST",
       body: JSON.stringify(bemenet),
       headers: {"Content-type": "application/json; charset=UTF-8"}
@@ -31,7 +31,7 @@ felvitel=async ()=>{
     .then((response) => response.text())
     .then((szoveg) => {
 
-    alert(szoveg)
+    alert("Az Étel tipus sikeresen felvitelre került!")
      this.props.frissit() 
 
 })
@@ -44,7 +44,7 @@ felvitel=async ()=>{
     <View style = {{backgroundColor:'darkgrey',width:'80%',borderRadius:20,alignSelf:'center',borderColor:'black'}}>
       <View style={{padding: 10}}>
           <Text style={{padding: 10, fontSize: 22,color:'white',textAlign:'center'}}>
-              Felkívánt vinni típus neve:
+              Felkívánt vinni étel típus neve:
           </Text>
         <TextInput
           placeholderTextColor="white"
@@ -53,6 +53,14 @@ felvitel=async ()=>{
           onChangeText={(nev) => this.setState({nev})}
           value={this.state.nev}
         />
+
+
+
+
+        
+
+
+
 
         <Text style={{paddingTop: 10, fontSize: 22,color:'white',textAlign:'center'}}></Text>
         
@@ -65,6 +73,7 @@ felvitel=async ()=>{
         
       </View>
     </View>
+
     
     );
   }
