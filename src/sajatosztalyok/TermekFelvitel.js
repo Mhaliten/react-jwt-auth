@@ -6,9 +6,10 @@ export default class Bevitel extends Component {
     super(props);
     this.state = {
 
-        nev: '',
-        komment:""
-
+        termektipus_id: '',
+        termek_nev:"",
+        termek_ar_HUF:"",
+        termek_mertekegyseg:""
     };
   }
 
@@ -44,14 +45,47 @@ felvitel=async ()=>{
     <View style = {{backgroundColor:'darkgrey',width:'80%',borderRadius:20,alignSelf:'center',borderColor:'black'}}>
       <View style={{padding: 10}}>
           <Text style={{padding: 10, fontSize: 22,color:'white',textAlign:'center'}}>
-              Felkívánt vinni típus neve:
+          (termektipus_id)
           </Text>
         <TextInput
           placeholderTextColor="white"
           style={{height: 40,width:'50%',alignSelf:'center',backgroundColor:'black',borderColor:'black',color:"white",textAlign:'center'}}
           placeholder=""
-          onChangeText={(nev) => this.setState({nev})}
-          value={this.state.nev}
+          onChangeText={(termektipus_id) => this.setState({termektipus_id})}
+          value={this.state.termektipus_id}
+        />
+
+<Text style={{padding: 10, fontSize: 22,color:'white',textAlign:'center'}}>
+               (termek_nev)
+          </Text>
+        <TextInput
+          placeholderTextColor="white"
+          style={{height: 40,width:'50%',alignSelf:'center',backgroundColor:'black',borderColor:'black',color:"white",textAlign:'center'}}
+          placeholder=""
+          onChangeText={(termek_nev) => this.setState({termek_nev})}
+          value={this.state.termek_nev}
+        />
+
+<Text style={{padding: 10, fontSize: 22,color:'white',textAlign:'center'}}>
+              (termek_ar_HUF)
+          </Text>
+        <TextInput
+          placeholderTextColor="white"
+          style={{height: 40,width:'50%',alignSelf:'center',backgroundColor:'black',borderColor:'black',color:"white",textAlign:'center'}}
+          placeholder=""
+          onChangeText={(termek_ar_HUF) => this.setState({termek_ar_HUF})}
+          value={this.state.termek_ar_HUF}
+        />
+
+<Text style={{padding: 10, fontSize: 22,color:'white',textAlign:'center'}}>
+              (termek_mertekegyseg)
+          </Text>
+        <TextInput
+          placeholderTextColor="white"
+          style={{height: 40,width:'50%',alignSelf:'center',backgroundColor:'black',borderColor:'black',color:"white",textAlign:'center'}}
+          placeholder=""
+          onChangeText={(termek_mertekegyseg) => this.setState({termek_mertekegyseg})}
+          value={this.state.termek_mertekegyseg}
         />
 
         <Text style={{paddingTop: 10, fontSize: 22,color:'white',textAlign:'center'}}></Text>
