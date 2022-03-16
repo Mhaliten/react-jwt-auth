@@ -18,7 +18,11 @@ felvitel=async ()=>{
 
     
     let bemenet={
-      bevitel1:this.state.nev
+      bevitel1:this.state.termektipus_id,
+      bevitel2:this.state.termek_nev,
+      bevitel3:this.state.termek_ar_HUF,
+      bevitel4:this.state.termek_mertekegyseg
+
     
     }
 
