@@ -87,7 +87,7 @@ export default class AppTermek extends React.Component {
     }
 
     return(
-      <View style={{flex: 1, paddingTop:20,backgroundColor:'black'}}>
+      <View style={{flex: 1, paddingTop:20,paddingBottom:20,backgroundColor:'black',borderRadius:15}}>
 {/*--------------------------------------------------------------------------témák */}        
 <View style={{alignItems:"center"}}>
        <FlatList
