@@ -136,16 +136,6 @@ export default class AppTermek extends React.Component {
         
           keyExtractor={({termek_id}, index) => termek_id}
         />
-
-
-
-
-
-
-
-
-
-
       </View>
     );
   }

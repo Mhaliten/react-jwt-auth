@@ -7,7 +7,7 @@ export default class Bevitel extends Component {
     this.state = {
 
         nev: '',
-        komment:""
+       
 
     };
   }
@@ -21,7 +21,7 @@ felvitel=async ()=>{
     
     }
 
-    fetch('http://localhost:8080/tipusfelvitel',{
+    fetch('http://localhost:8080/etkez',{
       method: "POST",
       body: JSON.stringify(bemenet),
       headers: {"Content-type": "application/json; charset=UTF-8"}
@@ -44,7 +44,7 @@ felvitel=async ()=>{
     <View style = {{backgroundColor:'darkgrey',width:'80%',borderRadius:20,alignSelf:'center',borderColor:'black'}}>
       <View style={{padding: 10}}>
           <Text style={{padding: 10, fontSize: 22,color:'white',textAlign:'center'}}>
-              Felkívánt vinni kategória neve:
+              Felkívánt vinni recept típus neve:
           </Text>
         <TextInput
           placeholderTextColor="white"

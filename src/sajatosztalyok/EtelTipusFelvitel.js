@@ -31,7 +31,7 @@ felvitel=async ()=>{
     .then((response) => response.text())
     .then((szoveg) => {
 
-    alert("Az Étel tipus sikeresen felvitelre került!")
+    alert("Az Étkezés tipus sikeresen felvitelre került!")
      this.props.frissit() 
 
 })
@@ -44,7 +44,7 @@ felvitel=async ()=>{
     <View style = {{backgroundColor:'darkgrey',width:'80%',borderRadius:20,alignSelf:'center',borderColor:'black'}}>
       <View style={{padding: 10}}>
           <Text style={{padding: 10, fontSize: 22,color:'white',textAlign:'center'}}>
-              Felkívánt vinni étel típus neve:
+              Felkívánt vinni étkezés típus neve:
           </Text>
         <TextInput
           placeholderTextColor="white"
