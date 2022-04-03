@@ -6,10 +6,11 @@ export default class Bevitel extends Component {
     super(props);
     this.state = {
 
-        termektipus_id: '',
-        termek_nev:"",
-        termek_ar_HUF:"",
-        termek_mertekegyseg:""
+        recept_tipus_id: '',
+        elkeszites:"",
+        recept_hozzavalok:"",
+        etel_nev:"",
+        etel_tipus_nev:""
     };
   }
 
@@ -18,15 +19,16 @@ felvitel=async ()=>{
 
     
     let bemenet={
-      bevitel1:this.state.termektipus_id,
-      bevitel2:this.state.termek_nev,
-      bevitel3:this.state.termek_ar_HUF,
-      bevitel4:this.state.termek_mertekegyseg
+      bevitel1:this.state.recept_tipus_id,
+      bevitel2:this.state.elkeszites,
+      bevitel3:this.state.recept_hozzavalok,
+      bevitel4:this.state.etel_nev,
+      bevitel5:this.state.etel_tipus_nev
 
     
     }
 
-    fetch('http://localhost:8080/termek_felvitel',{
+    fetch('http://localhost:8080/recept_felvitel',{
       method: "POST",
       body: JSON.stringify(bemenet),
       headers: {"Content-type": "application/json; charset=UTF-8"}
@@ -49,47 +51,58 @@ felvitel=async ()=>{
     <View style = {{backgroundColor:'darkgrey',width:'80%',borderRadius:20,alignSelf:'center',borderColor:'black'}}>
       <View style={{padding: 10}}>
           <Text style={{padding: 10, fontSize: 22,color:'white',textAlign:'center'}}>
-          Termék típus azonosító:
+          Recept típus azonosító:
           </Text>
         <TextInput
           placeholderTextColor="white"
           style={{height: 40,width:'50%',alignSelf:'center',backgroundColor:'black',borderColor:'black',color:"white",textAlign:'center'}}
           placeholder=""
-          onChangeText={(termektipus_id) => this.setState({termektipus_id})}
-          value={this.state.termektipus_id}
+          onChangeText={(recept_tipus_id) => this.setState({recept_tipus_id})}
+          value={this.state.recept_tipus_id}
         />
 
 <Text style={{padding: 10, fontSize: 22,color:'white',textAlign:'center'}}>
-               Termék neve:
+               Elkészítés:
           </Text>
         <TextInput
           placeholderTextColor="white"
           style={{height: 40,width:'50%',alignSelf:'center',backgroundColor:'black',borderColor:'black',color:"white",textAlign:'center'}}
           placeholder=""
-          onChangeText={(termek_nev) => this.setState({termek_nev})}
-          value={this.state.termek_nev}
+          onChangeText={(elkeszites) => this.setState({elkeszites})}
+          value={this.state.elkeszites}
         />
 
 <Text style={{padding: 10, fontSize: 22,color:'white',textAlign:'center'}}>
-              Termék ára:
+              Hozzávalók:
           </Text>
         <TextInput
           placeholderTextColor="white"
           style={{height: 40,width:'50%',alignSelf:'center',backgroundColor:'black',borderColor:'black',color:"white",textAlign:'center'}}
           placeholder=""
-          onChangeText={(termek_ar_HUF) => this.setState({termek_ar_HUF})}
-          value={this.state.termek_ar_HUF}
+          onChangeText={(recept_hozzavalok) => this.setState({recept_hozzavalok})}
+          value={this.state.recept_hozzavalok}
         />
 
 <Text style={{padding: 10, fontSize: 22,color:'white',textAlign:'center'}}>
-              Termék mértékegysége:
+              Étel neve:
           </Text>
         <TextInput
           placeholderTextColor="white"
           style={{height: 40,width:'50%',alignSelf:'center',backgroundColor:'black',borderColor:'black',color:"white",textAlign:'center'}}
           placeholder=""
-          onChangeText={(termek_mertekegyseg) => this.setState({termek_mertekegyseg})}
-          value={this.state.termek_mertekegyseg}
+          onChangeText={(etel_nev) => this.setState({etel_nev})}
+          value={this.state.etel_nev}
+        />
+
+<Text style={{padding: 10, fontSize: 22,color:'white',textAlign:'center'}}>
+              Étel kategória neve:
+          </Text>
+        <TextInput
+          placeholderTextColor="white"
+          style={{height: 40,width:'50%',alignSelf:'center',backgroundColor:'black',borderColor:'black',color:"white",textAlign:'center'}}
+          placeholder=""
+          onChangeText={(etel_tipus_nev) => this.setState({etel_tipus_nev})}
+          value={this.state.etel_tipus_nev}
         />
 
         <Text style={{paddingTop: 10, fontSize: 22,color:'white',textAlign:'center'}}></Text>

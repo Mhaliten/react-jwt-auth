@@ -44,7 +44,7 @@ felvitel=async ()=>{
     <View style = {{backgroundColor:'darkgrey',width:'80%',borderRadius:20,alignSelf:'center',borderColor:'black'}}>
       <View style={{padding: 10}}>
           <Text style={{padding: 10, fontSize: 22,color:'white',textAlign:'center'}}>
-              Felkívánt vinni recept típus neve:
+              Felkívánt vinni recept típus neve (Pl. Főétel) :
           </Text>
         <TextInput
           placeholderTextColor="white"

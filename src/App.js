@@ -21,7 +21,9 @@ import TermekTorles from "./sajatosztalyok/TermekTorles";
 import TipusFelvitel from "./sajatosztalyok/TipusFelvitel";
 import EtelTipusFelvitel from "./sajatosztalyok/EtelTipusFelvitel";
 import TermekFelvitel from "./sajatosztalyok/TermekFelvitel";
+import ReceptFelvitel from "./sajatosztalyok/ReceptFelvitel";
 
+import ReceptKategoriaFelvitel from "./sajatosztalyok/ReceptKategoriaFelvitel";
 
 
 class App extends Component {
@@ -77,6 +79,30 @@ class App extends Component {
             <NavDropdown.Item href="TipusFelvitel">Tipus felvitele</NavDropdown.Item>
             <NavDropdown.Item href="EtelTipusFelvitel">Étel tipus felvitele</NavDropdown.Item>
             <NavDropdown.Item href="TermekFelvitel">Termék felvitele</NavDropdown.Item>
+            <NavDropdown.Item href="ReceptFelvitel">Recept felvitele</NavDropdown.Item>
+
+            <NavDropdown.Item href="ReceptKategoriaFelvitel">Recept kategória felvitele</NavDropdown.Item>
+            
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="#action/3.4">
+
+            <NavDropdown.Item href="/TipusTorles">Típusok törlése</NavDropdown.Item>
+            <NavDropdown.Item href="TermekTorles">Termék törlése</NavDropdown.Item>
+
+            </NavDropdown.Item>
+          </NavDropdown>
+          
+          )}
+
+          {showModeratorBoard && (   
+
+          <NavDropdown title="Moderátor menü" id="collasible-nav-dropdown">
+
+            <NavDropdown.Item href="TipusFelvitel">Tipus felvitele</NavDropdown.Item>
+            <NavDropdown.Item href="EtelTipusFelvitel">Étel tipus felvitele</NavDropdown.Item>
+            <NavDropdown.Item href="TermekFelvitel">Termék felvitele</NavDropdown.Item>
+            <NavDropdown.Item href="ReceptFelvitel">Recept felvitele</NavDropdown.Item>
+            <NavDropdown.Item href="ReceptKategoriaFelvitel">Recept kategória felvitele</NavDropdown.Item>
             
             <NavDropdown.Divider />
             <NavDropdown.Item href="#action/3.4">
@@ -142,6 +168,8 @@ login"> Bejelentkezés </Nav.Link>
             <Route path="/TipusFelvitel" component={TipusFelvitel} />
             <Route path="/EtelTipusFelvitel" component={EtelTipusFelvitel} />
             <Route path="/TermekFelvitel" component={TermekFelvitel} />
+            <Route path="/ReceptFelvitel" component={ReceptFelvitel} />
+            <Route path="/ReceptKategoriaFelvitel" component={ReceptKategoriaFelvitel} />
           </Switch>
         </div>
       </div>
