@@ -49,7 +49,7 @@ export default class AppTermek extends React.Component {
     let bemenet={
       bevitel1:szam
     }
-    return fetch('http://localhost:8080/recept_lekerdez',{
+    return fetch('http://localhost:8080/recept_lekerdez_receptek',{
       method: "POST",
       body: JSON.stringify(bemenet),
       headers: {"Content-type": "application/json; charset=UTF-8"}
