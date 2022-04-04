@@ -1,6 +1,5 @@
 import React from 'react';
 import {StyleSheet, FlatList, ActivityIndicator, Text, View, Image , TouchableOpacity } from 'react-native';
-
 export default class AppTermek extends React.Component {
 
   constructor(props){
@@ -23,7 +22,7 @@ export default class AppTermek extends React.Component {
 
   componentDidMount(){
     // alert("hello")
-    return fetch('http://localhost:8080/tipusok')
+    return fetch('http://localhost:8080/etkez')
       .then((response) => response.json())
       .then((responseJson) => {
 
@@ -33,7 +32,7 @@ export default class AppTermek extends React.Component {
         }, function(){
 
         });
-
+    
 
 
       })
@@ -50,7 +49,7 @@ export default class AppTermek extends React.Component {
     let bemenet={
       bevitel1:szam
     }
-    return fetch('http://localhost:8080/tipus_lekerdez',{
+    return fetch('http://localhost:8080/recept_lekerdez',{
       method: "POST",
       body: JSON.stringify(bemenet),
       headers: {"Content-type": "application/json; charset=UTF-8"}
@@ -65,7 +64,7 @@ export default class AppTermek extends React.Component {
         dataSource2: responseJson,
       }, function(){
 
-      
+    
       });
 
     })
@@ -87,7 +86,7 @@ export default class AppTermek extends React.Component {
     }
 
     return(
-      <View style={{flex: 1, paddingTop:20,paddingBottom:20,backgroundColor:'black',borderRadius:15}}>
+      <View style={{flex: 1, paddingTop:20,backgroundColor:'black'}}>
 {/*--------------------------------------------------------------------------témák */}        
 <View style={{alignItems:"center"}}>
        <FlatList
@@ -97,9 +96,9 @@ export default class AppTermek extends React.Component {
  
          <TouchableOpacity
         style={{backgroundColor:"grey",width:150,margin:10,borderRadius:10}}
-        onPress={async ()=>this.kivalaszt(item.tipus_id)}
+        onPress={async ()=>this.kivalaszt(item.etel_id)}
       >
-        <Text style={{color:"white",fontSize:20,textAlign:"center",marginTop:15,marginBottom:5}}   >{item.tipus_nev} </Text>
+        <Text style={{color:"white",fontSize:20,textAlign:"center",marginTop:15,marginBottom:5}}   >{item.eteltipus} </Text>
          
       </TouchableOpacity>
    
@@ -107,35 +106,46 @@ export default class AppTermek extends React.Component {
         
         }
     
-          keyExtractor={({tipus_id}, index) => tipus_id}
+          keyExtractor={({etel_id}, index) => etel_id}
         />
            </View>
-{/* ----------------------------------------------------uj class meghivasa*/}
+   
 
 
-{/*--------------------------------------------------------------------------a témába tartozó üzenetek */}        
-<FlatList 
-          
+<FlatList
           data={this.state.dataSource2}
           renderItem={({item}) => 
 
           <View style={{borderWidth:1,margin:20,backgroundColor:"#367588",paddingLeft:10,paddingRight:10,borderRadius:10}}>
 
          
-        <Text style={{color:"#00ffcc",fontSize:20,marginTop:15}}   >
-          {item.termek_nev} </Text>
-          <Text style={{color:"white",fontSize:15}}   >
-          {item.termek_ar_HUF} Ft / {item.termek_mertekegyseg} </Text>
+<Text style={{color:"white",fontSize:20,marginBottom:35}}   >
+           {item.etel_nev}
+           
+          </Text>
+          <Text style={{color:"white",fontSize:15}}>
+            Hozzávalók:
+          </Text>
           
+        <Text style={{color:"#00ffcc",fontSize:20,marginTop:15,marginBottom:25,fontFamily:"bold"}}   >
+          {item.recept_hozzavalok} </Text>    
+
+          <Text style={{color:"white",fontSize:15}}>
+            Elkészítés:
+          </Text>
+
+          <Text style={{color:"#00ffcc",fontSize:20,marginTop:15,marginBottom:25,fontFamily:"bold"}}   >
+          {item.elkeszites} </Text>     
      
    
           </View>
         
         }
     
-        
-          keyExtractor={({termek_id}, index) => termek_id}
+          keyExtractor={({recept_id}, index) => recept_id}
         />
+
+
       </View>
     );
   }

@@ -22,8 +22,10 @@ import TipusFelvitel from "./sajatosztalyok/TipusFelvitel";
 import EtelTipusFelvitel from "./sajatosztalyok/EtelTipusFelvitel";
 import TermekFelvitel from "./sajatosztalyok/TermekFelvitel";
 import ReceptFelvitel from "./sajatosztalyok/ReceptFelvitel";
-
 import ReceptKategoriaFelvitel from "./sajatosztalyok/ReceptKategoriaFelvitel";
+import ReceptTorles from "./sajatosztalyok/ReceptTorles";
+
+import ReceptLekerdez from "./sajatosztalyok/ReceptLekerdez";
 
 
 class App extends Component {
@@ -69,8 +71,8 @@ class App extends Component {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="#features">Receptek</Nav.Link>
-          <Nav.Link href="#pricing">Pricing</Nav.Link>
+          <Nav.Link href="ReceptLekerdez">Receptek</Nav.Link>
+          
 
           {showAdminBoard && (   
 
@@ -80,14 +82,16 @@ class App extends Component {
             <NavDropdown.Item href="EtelTipusFelvitel">Étel tipus felvitele</NavDropdown.Item>
             <NavDropdown.Item href="TermekFelvitel">Termék felvitele</NavDropdown.Item>
             <NavDropdown.Item href="ReceptFelvitel">Recept felvitele</NavDropdown.Item>
-
             <NavDropdown.Item href="ReceptKategoriaFelvitel">Recept kategória felvitele</NavDropdown.Item>
+
+            <NavDropdown.Item href="ReceptLekerdez">Receptek</NavDropdown.Item>
             
             <NavDropdown.Divider />
             <NavDropdown.Item href="#action/3.4">
 
             <NavDropdown.Item href="/TipusTorles">Típusok törlése</NavDropdown.Item>
             <NavDropdown.Item href="TermekTorles">Termék törlése</NavDropdown.Item>
+            <NavDropdown.Item href="ReceptTorles">Recept törlése</NavDropdown.Item>
 
             </NavDropdown.Item>
           </NavDropdown>
@@ -109,6 +113,8 @@ class App extends Component {
 
             <NavDropdown.Item href="/TipusTorles">Típusok törlése</NavDropdown.Item>
             <NavDropdown.Item href="TermekTorles">Termék törlése</NavDropdown.Item>
+
+            <NavDropdown.Item href="TermekTorles">ReceptTorles</NavDropdown.Item>
 
             </NavDropdown.Item>
           </NavDropdown>
@@ -170,6 +176,9 @@ login"> Bejelentkezés </Nav.Link>
             <Route path="/TermekFelvitel" component={TermekFelvitel} />
             <Route path="/ReceptFelvitel" component={ReceptFelvitel} />
             <Route path="/ReceptKategoriaFelvitel" component={ReceptKategoriaFelvitel} />
+            <Route path="/ReceptTorles" component={ReceptTorles} />
+
+            <Route path="/ReceptLekerdez" component={ReceptLekerdez} />
           </Switch>
         </div>
       </div>
