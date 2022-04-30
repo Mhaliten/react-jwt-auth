@@ -10,7 +10,7 @@ export default class Bevitel extends Component {
         elkeszites:"",
         recept_hozzavalok:"",
         etel_nev:"",
-        etel_tipus_nev:""
+        //etel_tipus_nev:""
     };
   }
 
@@ -23,7 +23,7 @@ felvitel=async ()=>{
       bevitel2:this.state.elkeszites,
       bevitel3:this.state.recept_hozzavalok,
       bevitel4:this.state.etel_nev,
-      bevitel5:this.state.etel_tipus_nev
+     // bevitel5:this.state.etel_tipus_nev
 
     
     }
@@ -38,7 +38,7 @@ felvitel=async ()=>{
     .then((response) => response.text())
     .then((szoveg) => {
 
-    alert(szoveg)
+    alert("A felvitel sikeresen megtörtént!")
      this.props.frissit() 
 
 })
@@ -94,16 +94,7 @@ felvitel=async ()=>{
           value={this.state.etel_nev}
         />
 
-<Text style={{padding: 10, fontSize: 22,color:'white',textAlign:'center'}}>
-              Étel kategória neve:
-          </Text>
-        <TextInput
-          placeholderTextColor="white"
-          style={{height: 40,width:'50%',alignSelf:'center',backgroundColor:'black',borderColor:'black',color:"white",textAlign:'center'}}
-          placeholder=""
-          onChangeText={(etel_tipus_nev) => this.setState({etel_tipus_nev})}
-          value={this.state.etel_tipus_nev}
-        />
+
 
         <Text style={{paddingTop: 10, fontSize: 22,color:'white',textAlign:'center'}}></Text>
         

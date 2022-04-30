@@ -102,19 +102,14 @@ class App extends Component {
 
           <NavDropdown title="Moderátor menü" id="collasible-nav-dropdown">
 
-            <NavDropdown.Item href="TipusFelvitel">Tipus felvitele</NavDropdown.Item>
-            <NavDropdown.Item href="EtelTipusFelvitel">Étel tipus felvitele</NavDropdown.Item>
-            <NavDropdown.Item href="TermekFelvitel">Termék felvitele</NavDropdown.Item>
+            
             <NavDropdown.Item href="ReceptFelvitel">Recept felvitele</NavDropdown.Item>
             <NavDropdown.Item href="ReceptKategoriaFelvitel">Recept kategória felvitele</NavDropdown.Item>
             
             <NavDropdown.Divider />
             <NavDropdown.Item href="#action/3.4">
 
-            <NavDropdown.Item href="/TipusTorles">Típusok törlése</NavDropdown.Item>
-            <NavDropdown.Item href="TermekTorles">Termék törlése</NavDropdown.Item>
-
-            <NavDropdown.Item href="TermekTorles">ReceptTorles</NavDropdown.Item>
+            <NavDropdown.Item href="ReceptTorles">Recept törlése</NavDropdown.Item>
 
             </NavDropdown.Item>
           </NavDropdown>

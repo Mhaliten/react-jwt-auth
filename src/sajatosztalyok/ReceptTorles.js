@@ -9,12 +9,12 @@ export default class FetchExample extends React.Component {
   }
 
   kitorles=(szam)=>{
-    alert(szam)
+    alert("A törlés sikeresen megtörtént!")
     var bemenet={
       bevitel1:szam
     }
 
-  fetch("http:/localhost:8080/recept_torles", {
+  fetch("http://localhost:8080/recept_torles", {
       method: "POST",
       body: JSON.stringify(bemenet),
       headers: {"Content-type": "application/json; charset=UTF-8"}
