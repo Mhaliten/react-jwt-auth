@@ -36,7 +36,7 @@ felvitel=async ()=>{
     .then((response) => response.text())
     .then((szoveg) => {
 
-    alert(szoveg)
+    alert("A felvitel sikeresen megtörtént!")
      this.props.frissit() 
 
 })

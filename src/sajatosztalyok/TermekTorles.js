@@ -9,7 +9,7 @@ export default class FetchExample extends React.Component {
   }
 
   kitorles=(szam)=>{
-    alert(szam)
+    alert("A törlés sikeresen megtörtént!")
     var bemenet={
       bevitel1:szam
     }
